@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nav bar</title>
+    <script
+      src="https://kit.fontawesome.com/2d323a629b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main2.js" defer></script>
+  <title>혼자서 해보기!!!</title>
+  <style>
+    :root{
+      --text-color: #f0f4f5;
+      --background-color: #263343;
+      --accent-color: #d49466;
+    }
+    * {
+      /* Tells the browser to account for any border and 
+      padding in the values you specify for an element's 
+      width and height. */
+      box-sizing: border-box;
+    }
+    body{
+      font-size: 18px;
+      color:var(--text-color);
+      margin:0;
+      
+    }
+    a{
+      text-decoration: none;
+      color:var(--text-color);
+    }
+    .class{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding: 8px 12px;
+      background-color: var(--background-color);
+    }
+    .nav__logo {
+      display:flex;
+      font-size: 24px;
+      color: var(--text-color);
+    }
+    .nav_logo i{
+      color:var(--accent-color);
+
+    }
+    .nav_menu{
+      display:flex;
+      padding-left: 0;
+      list-style: none;
+    }
+    .nav_menu li{
+      list-style: none;
+      padding: 8px 12px;
+
+    }
+    .nav_menu li:hover{
+      background-color:var(--accent-color);
+      border-radius: 5px;
+      text-align: center;
+    }
+    .nav_icons{
+      display:flex;
+      list-style: none;
+      padding: 8px 12px;
+      padding-left: 0;
+      color: var(--text-color);
+    }
+    .nav_icons li{
+      padding: 8px 12px;
+    }
+    .nav_toggleBtn{
+      display: none;
+      color:var(--accent-color);
+      position:absolute;
+      right: 32px;
+      font-size: 24px;
+    }
+
+    /*for small sc*/
+    @media screen and (max-width: 756px) {
+      .class{
+        padding: 8px 24px;
+        flex-direction:column;
+        align-items: flex-start;
+      }
+      .nav_menu{
+        display:none;
+        flex-direction: column;
+        width:100%;
+      }
+      .nav_menu li{
+        text-align: center;
+        width:100%;
+      }
+      .nav_menu a{
+        display: block;
+      }
+      .nav_icons {
+        display:none;
+        justify-content:center;
+        width:100%;
+      }
+      .nav_toggleBtn{
+        display: block;
+      }
+      .nav_menu.active,
+      .nav_icons.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="class">
+    <!--logo-->
+    <div class="nav_logo">
+      <i class="fab fa-affiliatetheme"></i>
+      <a href="#">DreamCoding</a>
+    </div>
+    <!--menu-->
+      <ul class="nav_menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Weddings</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Bookings</a></li>
+    </ul>
+
+    <ul class="nav_icons">
+      <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fab fa-facebook-f"></i></li>
+    </ul>
+    <a href="#" class="nav_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+  </nav>
+</body>
+</html>
