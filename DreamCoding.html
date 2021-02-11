@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- 폰트 불러오기-->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+  <!--아이콘 불러오기-->
+  <script src="https://kit.fontawesome.com/f82abb0f1b.js" crossorigin="anonymous"></script>
+  <script src="main.js" defer></script>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Source Sans pro';
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #263343;
+      padding: 8px 12px;
+    }
+
+    .navbar_logo {
+      font-size: 24px;
+      color: wheat;
+    }
+
+    .navbar_menu {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .navbar_menu li {
+      padding: 8px 12px;
+    }
+
+    .navbar_menu li:hover {
+      background-color: #d49466;
+      border-radius: 4px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .navbar_icon {
+      display: flex;
+      list-style: none;
+      color: white;
+    }
+
+    .navbar_icon li {
+      padding: 8px 12px;
+    }
+
+    /*쿼리 안에 있는게 아님*/
+    .navbar_toggleBtn {
+      /*항상 보이는거 방지(화면 작아졌을때만 나오게)*/
+      display: none;
+
+      position: absolute;
+
+      /*오른쪽에서 32떨어진곳에 고정*/
+      right: 32px;
+
+      color: #d49466;
+      font-size: 24px;
+    }
+
+
+    /*반응형 쿼리(모바일)*/
+    @media screen and (max: width 500px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+      }
+
+      .navbar_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .navbar_menu li {
+
+        width: 100%;
+        text-align: center;
+      }
+
+      .navbar__menu a {
+       /* Fill in an entire line so that user can click on any space */
+       display: block;
+      }
+
+      .navbar_icon {
+        display: none;
+        width: 100%;
+        justify-content: center;
+
+        /*padding-left:0으로 주어야 중간으로 옴*/
+        /*padding-left: 0;*/
+      }
+
+      .navbar_toggleBtn {
+        display: block;
+      }
+
+      .navbar_menu.active,
+      .navbar_icon.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar_logo">
+      <i class="fab fa-galactic-senate"></i>
+      <a href="">DreamCoding</a>
+    </div>
+    <ul class="navbar_menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">Gallery</a></li>
+      <li><a href="">Weddings</a></li>
+      <li><a href="">FAQ</a></li>
+      <li><a href="">Bookings</a></li>
+    </ul>
+    <ul class="navbar_icon">
+      <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fab fa-facebook-f"></i></li>
+    </ul>
+
+    <a href="#" class="navbar_toggleBtn"><i class="fas fa-bars"></i></a>
+    <!--링크 누르면 현재p로 가는것을 방지=#-->
+
+  </nav>
+</body>
+
+</html>
