@@ -4,9 +4,225 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link
+  href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+  rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <script
+  src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+  
+  <title>youtube</title>
+
+  <style>
+    :root{
+    --text-color: #000a12;
+    --background-color: #263343;
+    --accent-color: #d49466;
+    }
+    body{
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     
+    }
+    a{
+      text-decoration: none;
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      background-color:#000a12;
+      padding: 8px 12px;
+      position: sticky;
+    }
+    .logo i{
+      color:#d50000;
+      font-size: 24px;
+    }
+    .logo a{
+      font-size: 24px;
+      color:whitesmoke;
+      font-weight: 50px;
+      font-family: 'Oswald', sans-serif;
+    }
+    .options a{
+      color:whitesmoke;
+      padding: 8px 12px;
+    }
+    .info{
+      display: flex;
+      justify-content:space-between;
+      align-items: flex-start;
+      align-content: center;
+      flex-direction: column;
+      padding: 8px 12px;
+    }
+    .info_title{
+      padding:0;
+    }
+    .video{
+      width: 100%;
+      height: 100%;
+      max-width: 1000px;
+      text-align:center;
+      background-color: black;
+      position:sticky;
+      top:0;
+    }
+    .iframe{
+      text-align:center;
+      background-color: black;
+    }
+    .hash{
+      color:blue;
+      font-size: 14px;
+    }
+    .views{
+      font-size: 14px;
+    }
+    .icons{
+      display: flex;
+      width: 100%;
+      font-size: 24px;
+      justify-content: space-between;
+    }
+    .profile{
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .avatar{
+     width: 70px;
+     height: 70px; 
+     border-radius: 70%;
+     overflow: hidden;
+    }
+    .info_name{
+      align-self: flex-start;
+    }
+    .item{
+      display: flex;
+      padding: 0px 12px;
+    }
+    .title{
+      padding: 8px 12px;
+    }
+    .thumbnail{
+     width: 230px;
+     height: 170px; 
+     padding: 0;
+    }
+    .upNext_ul{
+      padding: 8px 8px;
+      font-size: 14px;
+    }
+    li{
+      list-style: none;
+    } 
+    button{
+      border:0;
+      outline:0;
+      background-color:transparent;
+    }
+  </style>
 </head>
 <body>
-  
+    <nav class="header">
+    <div class="logo">
+     <i class="fab fa-youtube"></i>
+     <a href>Youtube</a>
+    </div>
+    <ul class="options">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+    </ul>
+    </nav>
+    <!--영상-->
+    <section class="video">
+      <!--<video class="iframe" controls autoplay src="video/video.mp4"></video>-->
+      <iframe width="100%" height="100%" class="iframe"  src="https://www.youtube.com/embed/67stn7Pu7s4" frameborder="0"
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </section>
+    <!--영상 정보-->
+    <section class="info">
+      <span class="hash">
+        #클론코딩 #프론트앤드 #웹퍼블리셔
+      </span>
+      <span class=" info_title">
+        클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오)
+         | 프론트엔드 개발자 입문편: HTML, CSS, Javascript</span>
+      <span class="views">조회수 49,067회•2020. 3. 14.</span>
+      <span class="icons">
+        <i class="fas fa-thumbs-up"></i>
+        <i class="fas fa-thumbs-down"></i>
+        <i class=" fas fa-share"></i>
+        <i class="fas fa-plus"></i>
+        <i class="fab fa-font-awesome-flag"></i>
+      </span>
+    </section>
+
+    <!--프로필-->
+    <section class="profile">
+      <div class="avatar">
+        <img src="images/blue.jpg">
+      </div>
+      <span class="info_name">
+        드림코딩 예링
+      </span>
+      <span class="subscribers">
+        100만명
+      </span>
+      <button class="subscribe">
+        구독하기
+      </button>
+    </section>
+
+    <!--재생 목록-->
+    <section class="upNext">
+      <span class="title">Up Next</span>
+      <ul class="upNext_ul">
+      <li class="item">
+        <img class="thumbnail"src="images/thumbnail.jpg" >
+      <div class="info">
+       <span class="up_title">
+        클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오)
+        | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
+       </span>
+       <span class="up_name">드림코딩 예링</span>
+       <span class="up_views">조회수 658회 </span>
+      </div>
+      <button><i class="fas fa-ellipsis-v"></i></button>
+      </li>
+      <li class="item">
+        <img class="thumbnail" src="images/thumbnail.jpg" >
+      <div class="info">
+       <span class="up_title">
+        클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오)
+        | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
+       </span>
+       <span class="up_name">드림코딩 예링</span>
+       <span class="up_views">조회수 658회 </span>
+      </div>
+      <button><i class="fas fa-ellipsis-v"></i></button>
+      </li>
+      <li class="item">
+        <img class="thumbnail" src="images/thumbnail.jpg" >
+      <div class="info">
+       <span class="up_title">
+        클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오)
+        | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
+       </span>
+       <span class="up_name">드림코딩 예링</span>
+       <span class="up_views">조회수 658회 </span>
+      </div>
+      <button><i class="fas fa-ellipsis-v"></i></button>
+      </li>
+    </ul>
+    </section>
 </body>
 </html>
