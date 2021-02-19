@@ -1,8 +1,8 @@
 /* Global */
 :root {
   --text-color: #f0f4f5;
-  --background-color: #263343;
-  --accent-color: #d49466;
+  --background-color: #94af76;
+  --accent-color: #f8ffd7;
 }
 
 * {
@@ -53,6 +53,8 @@ a {
 }
 
 .navbar__menu li:hover {
+  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
+    1px 0 var(--background-color), 0 -1px var(--background-color);
   background-color: var(--accent-color);
   border-radius: 4px;
 }
